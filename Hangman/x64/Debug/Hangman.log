@@ -1,0 +1,5 @@
+﻿  Hangman.cpp
+D:\IT\IT\C++\Hangman\Hangman\Hangman.cpp(98,38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\IT\IT\C++\Hangman\Hangman\Hangman.cpp(116,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\IT\IT\C++\Hangman\Hangman\Hangman.cpp(127,7): warning C4101: 'cacat': unreferenced local variable
+  Hangman.vcxproj -> D:\IT\IT\C++\Hangman\x64\Debug\Hangman.exe
