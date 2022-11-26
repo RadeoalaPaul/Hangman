@@ -1,3 +1,3 @@
 ﻿  Hangman.cpp
-D:\IT\IT\C++\Hangman\Hangman\Hangman.cpp(97,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Hangman.vcxproj -> D:\IT\IT\C++\Hangman\x64\Debug\Hangman.exe
+C:\Users\Paul\Desktop\vh\Hangman\Hangman\Hangman.cpp(223,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Hangman.vcxproj -> C:\Users\Paul\Desktop\vh\Hangman\x64\Debug\Hangman.exe
