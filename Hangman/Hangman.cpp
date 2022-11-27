@@ -16,8 +16,17 @@ bool verificaCuvantExistent(string cuvant) {
 	string cuvinte[120], c;
 	bool existent = false;
 	f.open("cuvinte.in");
+	int i = 0;
 	while (getline(f, c)) {
-		if (c == cuvant) existent = true;
+		for (i; i < cuvant.length(); i++) {
+			if (c[i] == toupper(cuvant[i]) || c[i] == tolower(cuvant[i]));
+			else break;
+		}
+		if (i == cuvant.length()) {
+			existent = true; 
+			break;
+		}
+		else;
 	}
 	f.close();
 	if (existent) return true;
