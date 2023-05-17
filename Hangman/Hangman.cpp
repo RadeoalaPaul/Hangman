@@ -131,7 +131,7 @@ void jocPrincipal() {
 			cout << cuvant_ghicit[i] << " ";
 		}
 		cout << "\n\nLitera: "; cin >> litera;
-		while(!(litera >= 'a' && litera <= 'z') && !(litera >= 'A' && litera <= 'Z') && incercari!=0) {
+		while(!((litera >= 'a' && litera <= 'z') || !(litera >= 'A' && litera <= 'Z')) && incercari!=0) {
 			system("cls");
 			incercari--;
 			cout << "~~~~~HANGMAN~~~~~\n\nSunt acceptate doar litere!\n\nAi " << incercari << " incercari.\n\nLitere folosite: ";
@@ -146,12 +146,14 @@ void jocPrincipal() {
 		}
 		for (i = 0; i < 33; i++) {
 			c = litera_folosita[i];
-			if (litera == toupper(c) || litera == tolower(c)) break;
+			if (litera == toupper(c) || litera == tolower(c)) {
+				incercari--; break;
+			}
 		}
 		while (((litera == toupper(c) || litera == tolower(c)) || !(litera >= 'a' && litera <= 'z') && !(litera >= 'A' && litera <= 'Z')) && incercari != 0) {
 			system("cls");
 			incercari--;
-			cout << "~~~~~HANGMAN~~~~~\n\nLitera a fost deja folosita! Nu poti folosi decat litere!\n\nAi " << incercari << " incercari.\n\nLitere folosite: ";
+			cout << "~~~~~HANGMAN~~~~~\n\nNu poti folosi decat litere nefolosite (exclus simboluri/numere)!\n\nAi " << incercari << " incercari.\n\nLitere folosite: ";
 			for (i = 0; i < 33; i++) {
 				cout << litera_folosita[i] << " ";
 			}
