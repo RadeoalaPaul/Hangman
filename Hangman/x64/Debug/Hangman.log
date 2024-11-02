@@ -1,3 +1,4 @@
 ﻿  Hangman.cpp
-C:\Users\radeo\OneDrive\Desktop\hangman\Hangman\Hangman\Hangman.cpp(234,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Hangman.vcxproj -> C:\Users\radeo\OneDrive\Desktop\hangman\Hangman\x64\Debug\Hangman.exe
+G:\visual studio\Hangman\Hangman\Hangman.cpp(135,9): warning C4552: '-': result of expression not used
+G:\visual studio\Hangman\Hangman\Hangman.cpp(284,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Hangman.vcxproj -> G:\visual studio\Hangman\x64\Debug\Hangman.exe
