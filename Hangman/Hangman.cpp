@@ -35,7 +35,6 @@ bool verificaCuvantExistent(string cuvant) {
 	if (existent) return true;
 	else return false;
 }
-
 bool esteGol() {
 	fin.open("cuvinte.in");
 	if (fin.peek() == ifstream::traits_type::eof()) {
@@ -44,7 +43,6 @@ bool esteGol() {
 	}
 	else return false;
 }
-
 bool nu_e_litera(string cuvant) {
 	bool nu_e_litera = false;
 	for (int i = 0; i < cuvant.length(); i++) {
@@ -57,7 +55,6 @@ bool nu_e_litera(string cuvant) {
 	if (nu_e_litera) return true;
 	else return false;
 }
-
 void adaugaCuvant() {
 	string cuvant;
 	system("cls");
@@ -87,7 +84,6 @@ void adaugaCuvant() {
 	threeDots();
 	mainMenu();
 }
-
 void golireFisier() {
 	if (esteGol()) {
 		mainMenu();
@@ -102,20 +98,27 @@ void golireFisier() {
 		mainMenu();
 	}
 }
-
 void Iesire() {
 	system("cls");
-	cout << "~~~~~HANGMAN~~~~~\n\nJocul se va inchide in catea secunde.\n\nSe incarca";
+	cout << "~~~~~HANGMAN~~~~~\n\nJocul se va inchide in cateva secunde.\n\nSe incarca";
 	threeDots();
 	exit(0);
 }
-
 void verificaGhicit(string cuvant_random, char litera) {
 	string cuvant;
 	cuvant += litera;
 	cout << cuvant << " ";
 }
-
+void listaCuvinte() {
+	system("cls");
+	f.open("cuvinte.in");
+	string c;
+	for (int i = 0; i <= 49; i++) {
+		getline(f, c);
+		cout << c;
+	}
+	f.close();
+}
 void jocPrincipal() {
 	string cuvant, cuvant_random;
 	char litera_folosita[33], litere_cuvant_random[100], cuvant_ghicit[100];
@@ -232,24 +235,25 @@ void jocPrincipal() {
 		}
 	}
 }
-
-void choice(char choice) {
-	switch (choice) {
-		case '1': {
+void choice(int alegere) {
+	switch (alegere) {
+		case 1: {
 			jocPrincipal();
 			break;
 		}
-		case '2': {
-			//listaCuvinte();
+		case 2: {
+			listaCuvinte();
 			break;
 		}
-		case '3': {
+		case 3: {
 			adaugaCuvant();
+			break;
 		}
-		case '4': {
+		case 4: {
 			golireFisier();
+			break;
 		}
-		case '5': {
+		case 5: {
 			Iesire();
 			break;
 		}
@@ -258,28 +262,24 @@ void choice(char choice) {
 		}
 	}
 }
-
-
 void mainMenu() {
-	char alegere;
+	int alegere;
 	system("cls");
 	cout << "~~~~~HANGMAN~~~~~\n\nAlege din meniul de mai jos\n\n1.Intra in joc\n2.Lista cuvinte\n3.Adauga cuvant\n4.Stergere lista cuvinte\n5.Iesi din joc\n\nAlegere: ";
 	cin >> alegere;
-	while (!(alegere >= '1' && alegere <= '9')) {
+	while (!(alegere >= 1 && alegere <= 9)) {
 		system("cls");
 		cout << "~~~~~HANGMAN~~~~~\n\nAlege din meniul de mai jos\n\n1.Intra in joc\n2.Adauga cuvant\n3.Iesi din joc\n\nAlegere: ";
 		cin >> alegere;
 	}
 	choice(alegere);
 }
-
 void threeDots() {
 	for (int i = 0; i < 3; i++) {
 		cout << ".";
 		Sleep(1000);
 	}
 }
-
 int main() {
 	srand(time(NULL));
 	mainMenu();

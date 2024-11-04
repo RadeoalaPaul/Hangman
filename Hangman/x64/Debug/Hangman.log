@@ -1,4 +1,4 @@
 ﻿  Hangman.cpp
-G:\visual studio\Hangman\Hangman\Hangman.cpp(135,9): warning C4552: '-': result of expression not used
-G:\visual studio\Hangman\Hangman\Hangman.cpp(284,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Hangman.vcxproj -> G:\visual studio\Hangman\x64\Debug\Hangman.exe
+D:\facultate\proiectSAIV\mipa_temp\Hangman\Hangman\Hangman.cpp(138,9): warning C4552: '-': result of expression not used
+D:\facultate\proiectSAIV\mipa_temp\Hangman\Hangman\Hangman.cpp(284,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Hangman.vcxproj -> D:\facultate\proiectSAIV\mipa_temp\Hangman\x64\Debug\Hangman.exe
